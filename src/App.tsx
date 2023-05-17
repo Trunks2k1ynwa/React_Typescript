@@ -12,7 +12,41 @@ function displayReview(totalReivew: number, name: string, primiumUser?: boolean)
   );
 }
 
-//
+// Optional: Không bắt buộc
+// name? parameter không bắt buộc
+// const travelItem:image,name,totalReview, rating, location,price,date,departture, features:wifi,parking, ofter
+const travelItem: {
+  image: string;
+  name: string;
+  totalReview: number;
+  rating: number;
+  location: number;
+  price: number;
+  date: string;
+  departure: string;
+  features: {
+    wifi: boolean;
+    parking: boolean;
+    ofter: boolean;
+  };
+}[] = [
+  {
+    image: 'abc.jpg',
+    name: 'Tour1',
+    totalReview: 1,
+    rating: 5,
+    location: 10,
+    price: 230,
+    date: '12/2/2013',
+    departure: 'ksạkkfjk',
+    features: {
+      wifi: true,
+      parking: true,
+      ofter: true,
+    },
+  },
+];
+
 const user: {
   firstname: string;
   lastname: string;
@@ -28,7 +62,10 @@ const user: {
 };
 function App() {
   const [count, setCount] = useState(0);
-  const reviews = [
+  const reviews: {
+    name: string;
+    primiumUser: boolean;
+  }[] = [
     {
       name: 'reviewer',
       primiumUser: false,
@@ -39,8 +76,6 @@ function App() {
     },
   ];
 
-  // Optional: Không bắt buộc
-  // name? parameter không bắt buộc
   return (
     <div className="App">
       <div className="review">
