@@ -17,5 +17,9 @@
     "jsx": "react-jsx"
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "ts-node":{
+    "esm":true,
+  },
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "lib":["esnext"]
 }
